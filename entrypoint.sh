@@ -13,6 +13,8 @@ hostname
 whoami
 env
 
+time=$(date)
+
 echo goodbye!
 
-echo ::set-output name=easter-egg::$SHELL
+echo ::set-output name=easter-egg::$time
