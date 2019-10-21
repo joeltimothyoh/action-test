@@ -20,10 +20,10 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.your-first-name }}
-    - ${{ inputs.your-middle-name }}
-    - ${{ inputs.your-last-name }}
-    - envvar
+  - ${{ inputs.your-first-name }}
+  - ${{ inputs.your-middle-name }}
+  - ${{ inputs.your-last-name }}
+  - envvar
   env:
     env_var1: value1
 branding:
