@@ -11,7 +11,8 @@ echo env_var1: $env_var1
 echo system info:
 hostname
 whoami
+env
 
 echo goodbye!
 
-echo ::set-output name=easter-egg:::$SHELL
+echo ::set-output name=easter-egg::$SHELL
