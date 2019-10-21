@@ -13,3 +13,5 @@ hostname
 whoami
 
 echo goodbye!
+
+echo ::set-output name=easter-egg:::$SHELL
