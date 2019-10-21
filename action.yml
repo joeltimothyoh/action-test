@@ -1,0 +1,31 @@
+name: 'action-hello'
+author: joe
+description: 'For all action tests'
+inputs:
+  your-first-name:
+    description: 'Your first name.'
+    required: true
+    default: 'stranger'
+  your-middle-name:
+    description: 'Your middle name'
+    required: false
+  your-last-name:
+    description: 'Your last name.'
+    required: false
+outputs:
+  easter-egg:
+    description: 'Easter egg.'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.your-first-name }}
+    - ${{ inputs.your-middle-name }}
+    - ${{ inputs.your-last-name }}
+    - envvar
+  env:
+    env_var1: value1
+branding:
+  icon: 'shuffle'
+  color: blue
